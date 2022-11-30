@@ -1,0 +1,183 @@
+---
+redirect_from:
+  - https://nvlabs.github.io/physdiff
+  - nvlabs.github.io/physdiff
+  - /physdiff
+---
+
+
+<!DOCTYPE html>
+<html lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZEKLLQP31"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KZEKLLQP31');
+  </script>
+  
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>
+    PhysDiff: Physics-Guided Human Motion Diffusion Model
+  </title>
+  <meta content="PhysDiff" property="og:title" />
+  <meta content="Denoising diffusion models hold great promise for generating diverse and realistic human motions. However, existing motion diffusion models largely disregard the laws of physics in the diffusion process and often generate physically-implausible motions with pronounced artifacts such as floating, foot sliding, and ground penetration. This seriously impacts the quality of generated motions and limits their real-world application. To address this issue, we present a novel physics-guided motion diffusion model (PhysDiff), which incorporates physical constraints into the diffusion process. Specifically, we propose a physics-based motion projection module that uses motion imitation in a physics simulator to project the denoised motion of a diffusion step to a physically-plausible motion. The projected motion is further used in the next diffusion step to guide the denoising diffusion process. Intuitively, the use of physics in our model iteratively pulls the motion toward a physically-plausible space. Experiments on large-scale human motion datasets show that our approach achieves state-of-the-art motion quality and improves physical plausibility drastically (>78% for all datasets)." name="description" property="og:description" />
+  <meta content="https://www.ye-yuan.com/physdiff" property="og:url" />
+  <meta name="keywords" content="Human Motion Diffusion Models, Physics Simulation, Text-to-Motion Generation, Action-to-Motion Generation, Character Animation, PhysDiff">
+
+  <link rel="stylesheet" href="./assets/css/project_stylesheet.css">
+  <link href="./data/favicon.ico" rel="shortcut icon">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./assets/academicons/css/academicons.min.css">
+
+  <script defer src="./assets/js/fontawesome.all.min.js"></script>
+
+</head>
+
+<body>
+  <div class="n-header">
+  </div>
+  <div class="n-title">
+    <h1>
+      PhysDiff: Physics-Guided Human Motion Diffusion Model
+    </h1>
+  </div>
+  <div class="n-byline">
+    <div class="byline">
+      <ul class="authors">
+        <li>
+          <a href="https://www.ye-yuan.com/" target="_blank">Ye Yuan</a>
+        </li>
+        <li>
+          <a href="https://tsong.me/" target="_blank">Jiaming Song</a>
+        </li>
+        <li>
+          <a href="http://www.umariqbal.info/" target="_blank">Umar Iqbal</a>
+        </li>
+        <li>
+          <a href="http://latentspace.cc/" target="_blank">Arash Vahdat</a>
+        </li>
+        <li>
+          <a href="https://jankautz.com/" target="_blank">Jan Kautz</a>
+        </li>
+      </ul>
+      <ul class="authors affiliations">
+        <li>
+          NVIDIA
+        </li>
+      </ul>
+      <ul class="authors links">
+        <li>
+          <a href="" target="_blank">
+            <button class="btn"><i class="fa fa-file-pdf"></i> Paper</button>
+          </a>
+        </li>
+        <li>
+          <a href="https://youtu.be/y8Tdcvzjfjg" target="_blank">
+            <button class="btn"><i class="fab fa-youtube"></i> Video</button>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="n-article">
+    
+    <table style="width:100%;border:0px;border-spacing:5px 0px;border-collapse:separate;margin-right:auto;margin-left:auto;padding-bottom:20px;"><tbody>
+      <tr class="block_videos">
+        <td>
+          <video width=100% height=auto muted autoplay loop playsinline>
+            <source src="data/physdiff_res1.mp4#t=0.001" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </td>
+        <td>
+          <video width=100% height=auto muted autoplay loop playsinline>
+            <source src="data/physdiff_res4.mp4#t=0.001" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </td>
+      </tr>
+    </table>
+
+    <h2 id="abstract">
+      Abstract
+    </h2>
+    <p>
+      Denoising diffusion models hold great promise for generating diverse and realistic human motions. However, existing motion diffusion models largely disregard the laws of physics in the diffusion process and often generate physically-implausible motions with pronounced artifacts such as floating, foot sliding, and ground penetration. This seriously impacts the quality of generated motions and limits their real-world application. To address this issue, we present a novel physics-guided motion diffusion model (PhysDiff), which incorporates physical constraints into the diffusion process. Specifically, we propose a physics-based motion projection module that uses motion imitation in a physics simulator to project the denoised motion of a diffusion step to a physically-plausible motion. The projected motion is further used in the next diffusion step to guide the denoising diffusion process. Intuitively, the use of physics in our model iteratively pulls the motion toward a physically-plausible space. Experiments on large-scale human motion datasets show that our approach achieves state-of-the-art motion quality and improves physical plausibility drastically (>78% for all datasets).
+    </p>
+
+    <h2>
+      Video
+    </h2>
+    <div class="video_wrapper shadow">
+      <iframe width="705" height="397" border-style=none src="https://www.youtube.com/embed/y8Tdcvzjfjg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <h2 id="comp_sota">
+      Comparison with the state-of-the-art
+    </h2>
+    <video class="centered shadow video_without_cap" width="100%" autoplay muted loop playsinline>
+        <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
+        <source src="data/physdiff_comp1.mp4#t=0.001" type="video/mp4" />
+    </video>
+    <video class="centered shadow video_without_cap" width="100%" autoplay muted loop playsinline>
+        <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
+        <source src="data/physdiff_comp2.mp4#t=0.001" type="video/mp4" />
+    </video>
+
+    <h2 id="add_vis">
+      Additional Visualizations
+    </h2>
+    <video class="centered shadow video_without_cap" width="100%" autoplay muted loop playsinline>
+        <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
+        <source src="data/physdiff_res2.mp4#t=0.001" type="video/mp4" />
+    </video>
+    <video class="centered shadow video_without_cap" width="100%" autoplay muted loop playsinline>
+        <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
+        <source src="data/physdiff_res3.mp4#t=0.001" type="video/mp4" />
+    </video>
+    <video class="centered shadow video_without_cap" width="100%" autoplay muted loop playsinline>
+        <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
+        <source src="data/physdiff_res5.mp4#t=0.001" type="video/mp4" />
+    </video>
+    <video class="centered shadow video_without_cap" width="100%" autoplay muted loop playsinline>
+        <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
+        <source src="data/physdiff_res6.mp4#t=0.001" type="video/mp4" />
+    </video>
+
+    <h2 id="citation">
+      Citation
+    </h2>
+    <pre class="bibtex">
+      <code>
+@article{ye2022physdiff,
+  title={PhysDiff: Physics-Guided Human Motion Diffusion Model},
+  author={Yuan, Ye and Song, Jiaming and Iqbal, Umar and Vahdat, Arash and Kautz, Jan},
+  journal={arXiv preprint arXiv:2212.xxxxx},
+  year={2022}
+}
+      </code>
+    </pre>
+
+    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr>
+        <td style="padding:0px">
+          <br>
+          <p style="text-align:right;font-size:small;">
+            Template adapted from <a href="https://nvlabs.github.io/GLAMR" target="_blank" style="font-size: small;">GLAMR</a>.
+          </p>
+        </td>
+      </tr>
+    </tbody></table>
+
+  </div>
+</body>
+
+</html>
